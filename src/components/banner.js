@@ -18,7 +18,7 @@ export class Banner extends React.Component {
                 <div className="menu">
                     <SideBar />
                 </div>
-                <h1>
+                <h1 className="name">
                     EarBugs
                     </h1>
                 

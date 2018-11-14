@@ -10,9 +10,11 @@
     
 }
 
-.banner h1{
+.name{
     background-color:red;
     color:white;
+    width:30%;
+    margin: 15px auto
 }
 
 

@@ -18,8 +18,13 @@ export class View extends React.Component{
     render() {
         return(
             <div className="view-box" >
-                <YouTubeComponent video={this.props.video1} start={this.props.start1} end={this.props.end1} />
-                <YouTubeComponent  video={this.props.video2} start={this.props.start2} end={this.props.end2}/>
+                <h2>{this.props.title}</h2>
+                <div className="view1">
+                    <YouTubeComponent video={this.props.video1} start={this.props.start1} end={this.props.end1} />
+                </div>
+                <div className="view2">
+                    <YouTubeComponent  video={this.props.video2} start={this.props.start2} end={this.props.end2}/>
+                </div>
             </div>
         )
     }
@@ -32,6 +37,7 @@ export const mapStateToProps = state => ({
     start2: state.videoReducer.start2,
     end1: state.videoReducer.end1,
     end2: state.videoReducer.end2,
+    title: state.videoReducer.title
  
   });
 

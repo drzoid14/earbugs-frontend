@@ -1,0 +1,11 @@
+#homeList {
+    list-style-type: none;
+    padding-inline-start: 0ex;
+    margin:auto;
+    width:40%;
+    text-align:left;
+}
+
+#homeList:link {
+    color:black
+}
