@@ -38,7 +38,7 @@ export class SignUp extends React.Component {
             )}>
                 <label htmlFor="username">Username</label>
                 <Field name="username" id="username" type="text" component="input" placeholder="Choose Your Name" />
-                <label hmtlFor="password">password</label>
+                <label hmtlFor="password">Password</label>
                 <Field name="password" id="password" type="password" component="input" />
                 <label hmtlFor="confirmpass">Confirm Password</label>
                 <Field name="confirmpass" id="confirmpass" type="password" component="input" />
