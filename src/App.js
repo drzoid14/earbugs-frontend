@@ -14,6 +14,7 @@ import Home from './components/home.js'
 import View from './components/view.js'
 import history from './history'
 import Banner from './components/banner'
+import Welcome from './components/welcome' 
 
 
 class App extends Component {
@@ -28,7 +29,8 @@ class App extends Component {
       </header>
         <main>
             <Switch>
-                <Redirect exact from="/" to="/home" />
+                <Redirect exact from="/" to="/welcome" />
+                 <Route exact path="/welcome" component={Welcome} />
                  <Route exact path="/profile/:userId" component={Profile} />
                  <Route exact path="/signin" component = {SignInForm} />
                  <Route exact path="/signup" component = {SignUpForm} />

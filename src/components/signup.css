@@ -1,5 +1,10 @@
-#signInForm {
+#signUpForm, #username, #password, #confirmpass {
     display: block;
-    grid-template-columns: repeat(2, 50% )
+    margin: 10px auto
+   
+}
+
+label {
+    font-weight: bold
 }
 
