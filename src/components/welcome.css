@@ -1,0 +1,41 @@
+.welcome-screen{
+    background-image: url('../musiccircle.png');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    height:400px
+}
+
+.intro{
+    width:50%;
+    padding-top:130px;
+    margin: 0 auto;
+    font-weight:bold;
+    width:200px;
+    padding-left:20px
+}
+
+.signup, .account {
+    width:50%;
+    display: inline-block;
+}
+
+.button {
+    background-color:rgba(3, 77, 146, 0.692);
+
+    color:white;
+    padding: 5px 15px;
+    text-decoration: none
+}
+
+.links {
+    height:100px;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.builtWith {
+    width: 80%;
+    font-size: 14px;
+    margin: 0 auto;
+}

@@ -4,15 +4,15 @@
     position:fixed;
     top:0;
     left:0;
-    background-image: url('./FreeVector-Musical-Notes-Pattern.jpg');
+    /* background-image: url('./FreeVector-Musical-Notes-Pattern.jpg'); */
     background-size: cover;
     background-repeat:no-repeat;
+    background-color:antiquewhite
     
 }
 
 .name{
-    background-color:red;
-    color:white;
+    color:black;
     width:30%;
     margin: 15px auto
 }
