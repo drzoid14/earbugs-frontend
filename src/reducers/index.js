@@ -32,7 +32,8 @@ export default function videoReducer(state=initialState, action)  {
             start2: action.comparison.start2,
             end1: action.comparison.end1,
             end2: action.comparison.end2,
-            title: action.comparison.title
+            title: action.comparison.title,
+            user: action.comparison.user
         });
     }
 

@@ -11,14 +11,19 @@ export class Home extends React.Component {
 componentDidMount(){
     console.log(this.props)
     this.props.dispatch(getHome(null))}
+
     
     render(){
         console.log(this.props.videoList)
         const videos = this.props.videoList.map(video =>
             <li key={video.id} className="folder-menu-list-item">
-                <Link to={`/view/${video.id}`}>
+                <Link className="title" to={`/view/${video.id}`}>
                     {video.title}
                 </Link>
+                <br/>
+                <span className="createdBy">Created By: {video.user.username}</span>
+                <br/>               
+                <span className="createdOn">{new Date(video.created).toLocaleDateString()}</span>
             </li>
         )
         return(

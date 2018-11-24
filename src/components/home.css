@@ -9,3 +9,21 @@
 #homeList:link {
     color:black
 }
+
+
+.title {
+    font-size:25px;
+    font-weight:bold;
+    text-decoration:none;
+
+}
+
+.createdBy, .createdOn {
+    font-size:14px
+}
+
+.folder-menu-list-item {
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    padding: 32px;
+    border-radius: 4px;
+}

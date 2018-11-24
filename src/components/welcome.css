@@ -1,9 +1,9 @@
 .welcome-screen{
     background-image: url('../musiccircle.png');
     background-repeat:no-repeat;
-    background-size:cover;
+    background:100 100;
     background-position:center;
-    height:400px
+    height:600px
 }
 
 .intro{

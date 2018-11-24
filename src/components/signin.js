@@ -2,7 +2,7 @@ import React from 'react'
 import './signin.css'
 import {getAuth, logout} from '../actions'
 import {reduxForm, Field} from 'redux-form';
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 export class SignIn extends React.Component {
@@ -39,8 +39,10 @@ export class SignIn extends React.Component {
                 <Field name="username" id="username" type="text" component="input" placeholder="Choose Your Name" />
                 <label hmtlFor="password">Password</label>
                 <Field name="password" id="password" type="password" component="input" />
-                <a href="/signup"><button type="button">Create Account</button></a>
                 <button type="submit">Sign In</button>
+                <br/>
+                <Link className="createAcct" to="/signup">Create Account</Link>
+                
 
             </form>
 

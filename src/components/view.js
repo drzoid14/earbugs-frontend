@@ -25,6 +25,8 @@ export class View extends React.Component{
                 <div className="view2">
                     <YouTubeComponent  video={this.props.video2} start={this.props.start2} end={this.props.end2}/>
                 </div>
+                <h1>{this.props.title}</h1>
+                <h3>Shared by {this.props.username}</h3>
             </div>
         )
     }
@@ -37,7 +39,8 @@ export const mapStateToProps = state => ({
     start2: state.videoReducer.start2,
     end1: state.videoReducer.end1,
     end2: state.videoReducer.end2,
-    title: state.videoReducer.title
+    title: state.videoReducer.title,
+    username: state.videoReducer.user ? state.videoReducer.user.username : ''
  
   });
 
