@@ -18,7 +18,6 @@ export class View extends React.Component{
     render() {
         return(
             <div className="view-box" >
-                <h2>{this.props.title}</h2>
                 <div className="view1">
                     <YouTubeComponent video={this.props.video1} start={this.props.start1} end={this.props.end1} />
                 </div>
