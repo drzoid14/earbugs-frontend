@@ -10,7 +10,7 @@ EarBugs is a site where you can pair up songs that sound the same to play their 
 
 <img src="screenshots/view.PNG" width=300 alt="view">
 
-<img src="screenshots/create.PNG" width=300 alt="creation">
+<img src="screenshots/creation.PNG" width=300 alt="creation">
 
 ## Tech Used
 
