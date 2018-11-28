@@ -16,7 +16,10 @@ export class SignUp extends React.Component {
         } else{
             
             
-        this.props.dispatch(newUser(values)); 
+        this.props.dispatch(newUser(values))
+            .catch(err=>{
+                console.log(err)
+            }); 
         
 
         
@@ -39,7 +42,7 @@ export class SignUp extends React.Component {
                 <label htmlFor="username">Username</label>
                 <Field name="username" id="username" type="text" component="input" placeholder="Choose Your Name" />
                 <label hmtlFor="password">Password</label>
-                <Field name="password" id="password" type="password" component="input" />
+                <Field name="password" id="password" type="password" component="input" placeholder="Min 10 Characters" />
                 <label hmtlFor="confirmpass">Confirm Password</label>
                 <Field name="confirmpass" id="confirmpass" type="password" component="input" />
 
