@@ -35,6 +35,7 @@ export class SignIn extends React.Component {
         return (
             <form id="signInForm" onSubmit={this.props.handleSubmit(values => this.onSubmit(values)
             )}>
+                <h2>Sign In Now</h2>
                 <label htmlFor="username">Username</label>
                 <Field name="username" id="username" type="text" component="input" />
                 <label hmtlFor="password">Password</label>

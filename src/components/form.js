@@ -52,6 +52,7 @@ export class CreateComparison extends React.Component {
                 <Field name="end2" id="end2" type="text" component="input" placeholder="0:00 format" required />
                 <label hmtlFor="title">Comparison Title</label>
                 <Field name="title" id="title" type="text" component="input" required />
+                <label></label>
                 <button type="submit">Create</button>
             </form>
             

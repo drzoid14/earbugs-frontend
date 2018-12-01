@@ -1,11 +1,38 @@
 import React from 'react';
 import './welcome.css';
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
+import {getAuth} from '../actions'
+import { connect } from 'react-redux'
 
 
 class Welcome extends React.Component {
+    constructor(props){
+        super(props)
+
+        this.state={}
+
+        this.demoLogin = this.demoLogin.bind(this)
+    }
+
+    demoLogin(){
+        console.log('clicked')
+        console.log(this)
+        const values={
+            username: 'demologin',
+            password: 'demopassword'
+        }
+        this.props.dispatch(getAuth(values))
+        
+    }
+
 
     render() {
+        if(this.props.user){
+            localStorage.username=this.props.user.username
+            return (
+                <Redirect to="/home" />
+            )
+        }
         return (
             <div>
                 <div className="welcome-screen">
@@ -30,6 +57,10 @@ class Welcome extends React.Component {
                         <p>Already have an account? </p>
                             <Link className="button" to="/signin">Log In</Link> 
                     </div>
+                    <div className="demo">
+                        <button onClick={this.demoLogin}>Demo Here</button>
+                        
+                    </div>
                 </div>
                 <div className="builtWith">
                     <p>This app was build using React, Redux, YouTube React, Mongo,
@@ -40,5 +71,9 @@ class Welcome extends React.Component {
         )
     }
 }
+const mapStateToProps = state =>( {
+    user: state.videoReducer.user
+})
 
-export default Welcome
+
+export default connect(mapStateToProps)(Welcome)

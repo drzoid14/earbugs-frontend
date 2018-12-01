@@ -1,4 +1,6 @@
+import { SubmissionError } from 'redux-form'
 const { API_BASE_URL } = require('../config')
+
 
 export const SET_COMPARISON = 'SET_COMPARISON'
 export const setComparison = comparison => ({
@@ -70,7 +72,7 @@ export const getFile = videoId => dispatch => {
         return res.json()
     }).then(resp => {
         console.log(resp)
-       return dispatch(setComparison(resp))
+        return dispatch(setComparison(resp))
     })
 }
 
@@ -128,14 +130,43 @@ export const newUser = user => dispatch => {
         headers: { 'content-type': 'application/json' }
     }).then(res => {
         if (!res.ok) {
-            return Promise.reject(res.statusText);
+            if (
+                res.headers.has('content-type') &&
+                res.headers
+                    .get('content-type')
+                    .startsWith('application/json')
+            ) {
+                // It's a nice JSON error returned by us, so decode it
+                return res.json().then(err => Promise.reject(err));
+            }
+            // It's a less informative error returned by express
+            return Promise.reject({
+                code: res.status,
+                message: res.statusText
+            });
         }
         return res.json();
     }).then(resp => {
         console.log(resp)
         console.log(user)
         return dispatch(getAuth(user));
-    });
+    })
+        .catch(err => {
+            const { reason, message, location } = err;
+            if (reason === 'ValidationError') {
+                // Convert ValidationErrors into SubmissionErrors for Redux Form
+                // return Promise.reject(
+                   throw new SubmissionError({
+                        [location]: message
+                    })
+                // );
+            }
+            return Promise.reject(
+                new SubmissionError({
+                    _error: 'Error submitting message'
+                })
+            );
+        });;
 }
 
 
