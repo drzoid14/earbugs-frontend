@@ -15,7 +15,7 @@ EarBugs was developed because I always end up singing one song overtop another. 
 In the creation tab, it is necessary to use 0:00 format for the time 
 
 ## API Documentation
-This app uses a simple Create, Read, Update, Delete (CRUD)API that is managed on a separate server Repo. Authentication is handled by using JSON Web Tokens kept on local storage. With the logout button you are returned to the home page and the local storage is cleared.
+This app uses a simple Create, Read, Update, Delete (CRUD)API that is managed on a [separate server Repo](https://github.com/drzoid14/earbugs). Authentication is handled by using JSON Web Tokens kept on local storage. With the logout button you are returned to the home page and the local storage is cleared.
 
 ## Tech Used
 
