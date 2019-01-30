@@ -2,7 +2,7 @@
 
 [Try it here](https://whispering-island-53296.herokuapp.com "EarBugs")
 
-EarBugs is a site where you can pair up songs that sound the same to play their similar sections and listen to them side by side.
+EarBugs was developed because I always end up singing one song overtop another.  This is a site where you can pair up songs that sound the same to play their similar sections and listen to them side by side.  Once created you can share these comparisons.
 
 <img src="screenshots/welcome.PNG" width=300 alt="landing page">
 
